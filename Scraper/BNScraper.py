@@ -71,7 +71,7 @@ if __name__ == '__main__':
     BN_df = pd.DataFrame.from_dict(d)
     BN_df['Title'].replace('', np.nan, inplace=True)
     BN_df = BN_df.dropna(subset =['Title'])
-    BN_df.to_csv("BNSales_data.csv", header = False, index = False)
+    BN_df.to_csv("BNSales_data.csv", header = True, index = False)
 
     with pd.option_context('display.max_rows', None,
                        'display.max_columns', None,
